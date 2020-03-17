@@ -7,9 +7,11 @@ If said objected oriented language:
 
 This is NOT an `abstract` class but a `concrete` implementation of `write and be bright` of following principal I believe in. 
 
-"- you `know` something when you read it, 
+"
+- you `know` something when you read it, 
 - you `learn` it when you practice it but 
-- you `earn` it when you teach it to others. !!!"
+- you `earn` it when you teach it to others. !!! 
+"
 
 This repository `@Overrides` all 3 methods of the principal and is been `tested` thoroughly. 
 
