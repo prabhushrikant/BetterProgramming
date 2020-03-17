@@ -1,4 +1,5 @@
 #Introduction
+
 This project is to practice any new technique/tool or framework related to Java in order to get
 better at programming. This is NOT an `abstract` method but a `concrete` implementation of `write and be bright` interface. 
 
