@@ -1,10 +1,17 @@
-#Introduction
+# Introduction
 
 This project is to practice any new technique/tool or framework related to Java in order to get
-better at programming. This is NOT an `abstract` method but a `concrete` implementation of `write and be bright` interface. 
+better at programming. 
 
-I believe you `know` something when you read it, `learn` it when you practice it yourself but `earn` it when you teach it to others. 
-This repository is serves all three purposes for me. 
+If said objected oriented language: 
+
+This is NOT an `abstract` class but a `concrete` implementation of `write and be bright` of following principal I believe in. 
+
+"- you `know` something when you read it, 
+- you `learn` it when you practice it but 
+- you `earn` it when you teach it to others. !!!"
+
+This repository `@Overrides` all 3 methods of the principal and is been `tested` thoroughly. 
 
 WRITE AND BE BRIGHT !!!
 
