@@ -4,7 +4,6 @@ package com.shrikant.designpatterns.gof.singleton;
 //since just private constructor is not enough.
 final public class SingletonExample {
 
-  private static final Object lock = new Object();
   private static SingletonExample instance;
 
   //can't use new, can't inherit (except by an inner class.
@@ -14,8 +13,8 @@ final public class SingletonExample {
   public static SingletonExample getInstance() {
 
     //thread safety.
-    synchronized (lock) {
-      if (instance == null) {
+    if (instance == null) {
+      synchronized (SingletonExample.class) {
         instance = new SingletonExample();
       }
     }

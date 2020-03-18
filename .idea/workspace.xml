@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dcd6cd08-9e9f-449b-9390-f58721fbbf77" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shrikant/designpatterns/gof/singleton/SingletonExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shrikant/designpatterns/gof/singleton/SingletonExample.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +134,7 @@
       <workItem from="1584429006809" duration="5033000" />
       <workItem from="1584434586579" duration="899000" />
       <workItem from="1584435494719" duration="2538000" />
-      <workItem from="1584516593589" duration="5424000" />
+      <workItem from="1584516593589" duration="6288000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit.">
       <created>1584434741317</created>
@@ -163,7 +164,21 @@
       <option name="project" value="LOCAL" />
       <updated>1584522300798</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="removing a package.">
+      <created>1584522618674</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1584522618674</updated>
+    </task>
+    <task id="LOCAL-00006" summary="rearranged pom">
+      <created>1584522751077</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584522751077</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,7 +195,9 @@
     </ignored-roots>
     <MESSAGE value="Initial Commit." />
     <MESSAGE value="Committing first design pattern and all the test and logger setup." />
-    <option name="LAST_COMMIT_MESSAGE" value="Committing first design pattern and all the test and logger setup." />
+    <MESSAGE value="removing a package." />
+    <MESSAGE value="rearranged pom" />
+    <option name="LAST_COMMIT_MESSAGE" value="rearranged pom" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -190,10 +207,10 @@
       <screen x="813" y="-1057" width="1920" height="1057" />
     </state>
     <state x="1373" y="-863" key="#Project_Structure/813.-1057.1920.1057/0.23.1680.980/-1107.-1057.1920.1057@813.-1057.1920.1057" timestamp="1584426353867" />
-    <state x="55" y="117" width="1340" height="795" key="CommitChangelistDialog2" timestamp="1584522684288">
+    <state x="55" y="117" width="1340" height="795" key="CommitChangelistDialog2" timestamp="1584522750994">
       <screen x="0" y="23" width="1680" height="980" />
     </state>
-    <state x="55" y="117" width="1340" height="795" key="CommitChangelistDialog2/813.-1057.1920.1057/0.23.1680.980/-1107.-1057.1920.1057@0.23.1680.980" timestamp="1584522684288" />
+    <state x="55" y="117" width="1340" height="795" key="CommitChangelistDialog2/813.-1057.1920.1057/0.23.1680.980/-1107.-1057.1920.1057@0.23.1680.980" timestamp="1584522750994" />
     <state x="168" y="110" key="DiffContextDialog" timestamp="1584434715508">
       <screen x="0" y="23" width="1680" height="980" />
     </state>
@@ -206,22 +223,22 @@
       <screen x="0" y="23" width="1680" height="980" />
     </state>
     <state x="471" y="226" key="Github.UntrackedFilesDialog/813.-1057.1920.1057/0.23.1680.980/-1107.-1057.1920.1057@0.23.1680.980" timestamp="1584437076214" />
-    <state width="1011" height="264" key="GridCell.Tab.0.bottom" timestamp="1584522290606">
+    <state width="1638" height="264" key="GridCell.Tab.0.bottom" timestamp="1584524101583">
       <screen x="0" y="23" width="1680" height="980" />
     </state>
-    <state width="1011" height="264" key="GridCell.Tab.0.bottom/813.-1057.1920.1057/0.23.1680.980/-1107.-1057.1920.1057@0.23.1680.980" timestamp="1584522290606" />
-    <state width="1011" height="264" key="GridCell.Tab.0.center" timestamp="1584522290605">
+    <state width="1638" height="264" key="GridCell.Tab.0.bottom/813.-1057.1920.1057/0.23.1680.980/-1107.-1057.1920.1057@0.23.1680.980" timestamp="1584524101583" />
+    <state width="1638" height="264" key="GridCell.Tab.0.center" timestamp="1584524101582">
       <screen x="0" y="23" width="1680" height="980" />
     </state>
-    <state width="1011" height="264" key="GridCell.Tab.0.center/813.-1057.1920.1057/0.23.1680.980/-1107.-1057.1920.1057@0.23.1680.980" timestamp="1584522290605" />
-    <state width="1011" height="264" key="GridCell.Tab.0.left" timestamp="1584522290604">
+    <state width="1638" height="264" key="GridCell.Tab.0.center/813.-1057.1920.1057/0.23.1680.980/-1107.-1057.1920.1057@0.23.1680.980" timestamp="1584524101582" />
+    <state width="1638" height="264" key="GridCell.Tab.0.left" timestamp="1584524101581">
       <screen x="0" y="23" width="1680" height="980" />
     </state>
-    <state width="1011" height="264" key="GridCell.Tab.0.left/813.-1057.1920.1057/0.23.1680.980/-1107.-1057.1920.1057@0.23.1680.980" timestamp="1584522290604" />
-    <state width="1011" height="264" key="GridCell.Tab.0.right" timestamp="1584522290606">
+    <state width="1638" height="264" key="GridCell.Tab.0.left/813.-1057.1920.1057/0.23.1680.980/-1107.-1057.1920.1057@0.23.1680.980" timestamp="1584524101581" />
+    <state width="1638" height="264" key="GridCell.Tab.0.right" timestamp="1584524101582">
       <screen x="0" y="23" width="1680" height="980" />
     </state>
-    <state width="1011" height="264" key="GridCell.Tab.0.right/813.-1057.1920.1057/0.23.1680.980/-1107.-1057.1920.1057@0.23.1680.980" timestamp="1584522290606" />
+    <state width="1638" height="264" key="GridCell.Tab.0.right/813.-1057.1920.1057/0.23.1680.980/-1107.-1057.1920.1057@0.23.1680.980" timestamp="1584524101582" />
     <state x="378" y="175" key="Maven.ArtifactSearchDialog" timestamp="1584518315346">
       <screen x="0" y="23" width="1680" height="980" />
     </state>
@@ -234,10 +251,10 @@
       <screen x="0" y="23" width="1680" height="980" />
     </state>
     <state x="348" y="152" key="SettingsEditor/813.-1057.1920.1057/0.23.1680.980/-1107.-1057.1920.1057@0.23.1680.980" timestamp="1584519034015" />
-    <state x="440" y="253" key="Vcs.Push.Dialog.v2" timestamp="1584522622486">
+    <state x="440" y="253" key="Vcs.Push.Dialog.v2" timestamp="1584522753186">
       <screen x="0" y="23" width="1680" height="980" />
     </state>
-    <state x="440" y="253" key="Vcs.Push.Dialog.v2/813.-1057.1920.1057/0.23.1680.980/-1107.-1057.1920.1057@0.23.1680.980" timestamp="1584522622486" />
+    <state x="440" y="253" key="Vcs.Push.Dialog.v2/813.-1057.1920.1057/0.23.1680.980/-1107.-1057.1920.1057@0.23.1680.980" timestamp="1584522753186" />
     <state x="100" y="123" width="1480" height="780" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1584435261260">
       <screen x="0" y="23" width="1680" height="980" />
     </state>
