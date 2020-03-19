@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dcd6cd08-9e9f-449b-9390-f58721fbbf77" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shrikant/designpatterns/gof/singleton/SingletonExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shrikant/designpatterns/gof/singleton/SingletonExample.java" afterDir="false" />
-    </list>
+    <list default="true" id="dcd6cd08-9e9f-449b-9390-f58721fbbf77" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,9 +111,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SingletonApp (1)" />
         <item itemvalue="JUnit.SingletonExampleTest.singleton_returns_same_instance_on_subsequent_calls" />
+        <item itemvalue="Application.SingletonApp (1)" />
         <item itemvalue="Application.SingletonApp" />
+        <item itemvalue="JUnit.SingletonExampleTest.singleton_returns_same_instance_on_subsequent_calls" />
+        <item itemvalue="Application.SingletonApp (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -207,10 +206,10 @@
       <screen x="813" y="-1057" width="1920" height="1057" />
     </state>
     <state x="1373" y="-863" key="#Project_Structure/813.-1057.1920.1057/0.23.1680.980/-1107.-1057.1920.1057@813.-1057.1920.1057" timestamp="1584426353867" />
-    <state x="55" y="117" width="1340" height="795" key="CommitChangelistDialog2" timestamp="1584522750994">
+    <state x="55" y="117" width="1340" height="795" key="CommitChangelistDialog2" timestamp="1584600943675">
       <screen x="0" y="23" width="1680" height="980" />
     </state>
-    <state x="55" y="117" width="1340" height="795" key="CommitChangelistDialog2/813.-1057.1920.1057/0.23.1680.980/-1107.-1057.1920.1057@0.23.1680.980" timestamp="1584522750994" />
+    <state x="55" y="117" width="1340" height="795" key="CommitChangelistDialog2/813.-1057.1920.1057/0.23.1680.980/-1107.-1057.1920.1057@0.23.1680.980" timestamp="1584600943675" />
     <state x="168" y="110" key="DiffContextDialog" timestamp="1584434715508">
       <screen x="0" y="23" width="1680" height="980" />
     </state>
