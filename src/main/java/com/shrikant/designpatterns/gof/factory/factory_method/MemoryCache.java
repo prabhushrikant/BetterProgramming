@@ -8,7 +8,7 @@ public abstract class MemoryCache<K, V> {
     this.cacheName = cacheName;
   }
 
-  protected String getCacheName() {
+  public String getCacheName() {
     return this.cacheName;
   }
 

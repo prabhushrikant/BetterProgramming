@@ -1,4 +1,4 @@
-package designpatterns.gof;
+package designpatterns.gof.singleton;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
