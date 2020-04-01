@@ -1,6 +1,5 @@
 package com.shrikant.designpatterns.gof.decorator;
 
-import com.shrikant.designpatterns.gof.decorator.exceptions.DecoratorException;
 import java.util.UUID;
 import javax.annotation.Nonnull;
 import org.slf4j.Logger;
@@ -10,7 +9,7 @@ public class EmailMessageDao extends AbstractDecorator {
 
   final Logger LOGGER = LoggerFactory.getLogger(EmailMessageDao.class);
 
-  @Override
+  //@Override
   public Message get(UUID id) {
     if (super.messageDao != null) {
       return super.messageDao.get(id);
@@ -19,7 +18,7 @@ public class EmailMessageDao extends AbstractDecorator {
     throw new DecoratorException("Component is set to null.");
   }
 
-  @Override
+  //@Override
   public Message create(@Nonnull String title, String body, String signature) {
     if (super.messageDao != null) {
       Message srcMessage = super.messageDao.create(title, body, signature);
@@ -28,7 +27,7 @@ public class EmailMessageDao extends AbstractDecorator {
     throw new DecoratorException("Component is set to null.");
   }
 
-  @Override
+  //@Override
   public void delete(UUID id) {
     if (super.messageDao != null) {
       super.messageDao.delete(id);
@@ -36,7 +35,7 @@ public class EmailMessageDao extends AbstractDecorator {
     throw new DecoratorException("Component is set to null.");
   }
 
-  @Override
+  //@Override
   public Message update(Message msgToUpdateWithId) {
     if (super.messageDao != null) {
       super.messageDao.update(msgToUpdateWithId);

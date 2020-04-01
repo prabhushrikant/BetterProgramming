@@ -1,4 +1,4 @@
-package com.shrikant.designpatterns.gof.decorator.exceptions;
+package com.shrikant.designpatterns.gof.decorator;
 
 public class DecoratorException extends RuntimeException {
 
