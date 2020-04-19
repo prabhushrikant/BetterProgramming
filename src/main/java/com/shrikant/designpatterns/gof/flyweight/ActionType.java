@@ -13,4 +13,11 @@ public enum ActionType {
   ActionType(int actionType) {
     this.value = actionType;
   }
+
+  /**
+   * @return the value
+   */
+  public int getValue() {
+    return value;
+  }
 }
