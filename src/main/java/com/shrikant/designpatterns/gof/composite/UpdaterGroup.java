@@ -31,7 +31,6 @@ public class UpdaterGroup extends User {
         readers.remove(user);
     }
 
-
     public void performAction(ActionType actionType, String resource) {
         Boolean hasAccess = (permissions & actionType.getValue()) > 0;
         if (hasAccess) {
