@@ -15,7 +15,7 @@ public class FlyWeightApp {
     //simulator for user logins
     for (int i = 1; i < 1000; i++) {
       UserType loggedUserType = randomUserTypeGenerator();
-      User createdUser = UserFactory.createUser(loggedUserType); //simple factory
+      User createdUser = UserFlyWeight.createUser(loggedUserType); //simple factory
 
       createdUser.performAction(ActionType.CREATE, "/root/RandomResourceUri"); //todo: write a random resource generator function.
     }
@@ -36,16 +36,5 @@ public class FlyWeightApp {
     }
 
     return randomUserType;
-  }
-
-  enum UserType {
-    GUEST(0),
-    ADMIN(1);
-
-    int value = 0; //default user is guest.
-
-    UserType(int userType) {
-      this.value = userType;
-    }
   }
 }

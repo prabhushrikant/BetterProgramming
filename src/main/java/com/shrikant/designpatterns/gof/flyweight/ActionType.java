@@ -5,13 +5,12 @@ public enum ActionType {
   READ(1),
   CREATE(4),
   UPDATE(2),
-  DELETE(8);
+  DELETE(8),
+  ADMIN(8|4|2|1);  //bitwise OR of the components.
 
   int value = 1;
 
   ActionType(int actionType) {
     this.value = actionType;
   }
-
-  ADMIN =(READ |CREATE |UPDATE |DELETE)
 }
