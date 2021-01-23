@@ -1,10 +1,4 @@
-package designpatterns.gof.factory.factory_method;
-
-import com.shrikant.designpatterns.gof.factory.factory_method.CustomMemCache;
-import com.shrikant.designpatterns.gof.factory.factory_method.CustomMemCacheFactory;
-import com.shrikant.designpatterns.gof.factory.factory_method.GoogleCache;
-import com.shrikant.designpatterns.gof.factory.factory_method.GoogleCacheFactory;
-import com.shrikant.designpatterns.gof.factory.factory_method.MemoryCache;
+package com.shrikant.designpatterns.gof.factory.factory_method;
 
 import org.junit.Test;
 

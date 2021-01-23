@@ -1,9 +1,8 @@
-package designpatterns.gof.singleton;
+package com.shrikant.designpatterns.gof.singleton;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
-import com.shrikant.designpatterns.gof.singleton.SingletonExample;
 import org.junit.Test;
 
 public class SingletonExampleTest {
