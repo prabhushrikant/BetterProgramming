@@ -20,7 +20,7 @@ public class KadaneTest {
     public void test_all_positive_numbers() {
   
         int[] arr = new int[] {1, 2, 3, 0, 5};
-        assertThat(9, is(testObj.maxSubarraySum(arr, arr.length)));
+        assertThat(11, is(testObj.maxSubarraySum(arr, arr.length)));
 
     }
 
