@@ -39,4 +39,14 @@ public class KadaneTest {
         assertThat(10, is(testObj.maxSubarraySum(arr, arr.length)));
 
     }
+
+    @Test
+    public void test_something_random() {
+  
+        int i = 9;
+        int result = i++;
+        assertThat(result, is(10));
+    }
+
+
 }

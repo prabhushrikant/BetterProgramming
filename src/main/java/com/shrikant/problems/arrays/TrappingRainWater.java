@@ -50,7 +50,7 @@ public class TrappingRainWater {
         {
             result += Math.min(left[i], right[i]) - arr[i];
         }
-
+         
         return result;
     } 
 

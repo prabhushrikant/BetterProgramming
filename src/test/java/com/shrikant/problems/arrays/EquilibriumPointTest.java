@@ -42,6 +42,6 @@ public class EquilibriumPointTest {
 
     @Test
     public void testEquilibriumPoint() {
-        assertThat(expectedResult, is(testObj.equilibriumPoint(inputArray, inputArray.length)));
+        assertThat(testObj.equilibriumPoint(inputArray, inputArray.length), is(expectedResult));
     }
 }
