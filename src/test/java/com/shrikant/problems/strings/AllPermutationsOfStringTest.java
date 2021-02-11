@@ -46,8 +46,7 @@ public class AllPermutationsOfStringTest {
     
     @Test
     public void testCharSubstraction() {
-        
-        System.out.println("%d", 'G');
+    
         assertEquals('G'-'a', 'g'-'a');
     }
 }
