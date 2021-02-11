@@ -2,6 +2,7 @@ package com.shrikant.problems.strings;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
 import java.util.List;
@@ -43,4 +44,10 @@ public class AllPermutationsOfStringTest {
         testObj.printAllPermutations(S, S.length(), "");
     }
     
+    @Test
+    public void testCharSubstraction() {
+        
+        System.out.println("%d", 'G');
+        assertEquals('G'-'a', 'g'-'a');
+    }
 }
