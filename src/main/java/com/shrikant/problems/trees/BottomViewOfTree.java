@@ -12,6 +12,7 @@ public class BottomViewOfTree {
     {
         //we purposefully use treeMap here which keeps the keys of the hashmap sorted in ascending order.
         //because we want to print the bottom view of the tree from left to right. (Key here is the width from the root of the tree, so left and bottom most element will have lowest width)
+        //More on treeMap here: https://www.geeksforgeeks.org/treemap-in-java/
         TreeMap<Integer, Node> widthMap = new TreeMap<Integer, Node>();
         bottomView(root, widthMap, 0);
 
