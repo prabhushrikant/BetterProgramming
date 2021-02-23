@@ -9,6 +9,7 @@ public class SpiralLevelTraversal {
 
     //apprach 1
     //extending the logic of level order traversal but keep a flag to switch order of printing
+    //O(n^2) time
     public ArrayList<Integer> findSpiral(Node root)
     {
         HeightOfTree obj = new HeightOfTree();
@@ -50,10 +51,11 @@ public class SpiralLevelTraversal {
     //this can also be solved in iterative method using two stacks.
     //keeping one stack for left to right printing nodes.
     //other for right to left printing nodes.
+    //O(n) time and O(n) extra space.
 
     //Note: Don't fall the fact that because it's a level order traversal and you should use queues, problem is much simpler using stacks 
     //flipping of right to left is inevitable.
 
-    
+
 
 }
