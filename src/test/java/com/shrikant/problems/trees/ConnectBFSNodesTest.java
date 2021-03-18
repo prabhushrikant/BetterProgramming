@@ -13,13 +13,13 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 @RunWith(Parameterized.class)
-public class BFSTest {
-    BFS testObj;
+public class ConnectBFSNodesTest {
+    ConnectBFSNodes testObj;
 
     private String input;
     private String expectedOutput;
 
-    public BFSTest(String input, String expectedOutput)
+    public ConnectBFSNodesTest(String input, String expectedOutput)
     {
         this.input = input;
         this.expectedOutput = expectedOutput;
@@ -27,7 +27,7 @@ public class BFSTest {
 
     @Before
     public void init() {
-        testObj = new BFS();
+        testObj = new ConnectBFSNodes();
     }
 
     @Parameterized.Parameters
@@ -42,8 +42,8 @@ public class BFSTest {
    }
 
    @Test
-   public void testBFS() {
+   public void testConnectBFSNodes() {
        Node root = Tree.buildTree(input);
-       assertThat(testObj.levelOrder(root).toString(), is(expectedOutput));
+       assertThat(testObj.connectNodesOnSameLevel(root).toString(), is(expectedOutput));
    }
 }
