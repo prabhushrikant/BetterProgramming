@@ -1,24 +1,14 @@
 package com.shrikant.problems.strings;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertEquals;
-
-import java.util.Arrays;
-import java.util.List;
+import static org.junit.Assert.assertNotEquals;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 
 
 public class AllPermutationsOfStringTest {
 
     AllPermutationsOfString testObj;
-
-    private String input;
-    private String expectedOutput;
 
     // constructor
     // public AllPermutationsOfStringTest(String input, String expectedOutput) {
@@ -45,8 +35,7 @@ public class AllPermutationsOfStringTest {
     }
     
     @Test
-    public void testCharSubstraction() {
-    
-        assertEquals('G'-'a', 'g'-'a');
+    public void testCharSubstraction() {    
+        assertNotEquals('G'-'a', 'g'-'a');
     }
 }

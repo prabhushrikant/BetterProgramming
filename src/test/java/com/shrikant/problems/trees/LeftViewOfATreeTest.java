@@ -5,7 +5,6 @@ import static org.hamcrest.core.Is.is;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.junit.Before;
 import org.junit.Test;
