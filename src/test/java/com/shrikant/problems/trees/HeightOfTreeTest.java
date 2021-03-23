@@ -44,4 +44,10 @@ public class HeightOfTreeTest {
        Node root = Tree.buildTree(input);
        assertThat(testObj.getHeight(root), is(expectedOutput));
    }
+
+   @Test
+   public void testHeightOfTree2() {
+       Node root = Tree.buildTree(input);
+       assertThat(testObj.getHeight2(root), is(expectedOutput));
+   }
 }

@@ -15,15 +15,17 @@ public class HeightOfTree {
         }
     }
 
-    //doesn't work
-    // public int getHeight2(Node node) 
-    // {
-    //     if (node == null) {
-    //         return 0;
-    //     }
-    //     return 1 + Math.max(
-    //         node.left != null ? getHeight2(node.left) : 0, 
-    //         node.right != null ? getHeight2(node.right) : 0);
-    // }
+    //when you want height starting from 1 instead of zero
+    //   5
+    //  /
+    // 4
+    // is considered height of 2 instead of 1.
+    public int getHeight2(Node node) 
+    {
+        if (node == null) {
+            return 0;
+        }
+        return 1 + Math.max(getHeight2(node.left), getHeight2(node.right));
+    }
     
 }
