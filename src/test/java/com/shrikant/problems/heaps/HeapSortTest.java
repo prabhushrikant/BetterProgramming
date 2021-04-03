@@ -22,11 +22,6 @@ public class HeapSortTest {
     public HeapSortTest(int[] input, int[] expectedOutput) {
         this.input = input;
         this.expectedOutput = expectedOutput;
-        HashMap<Character,Character> openingBrackets = new HashMap<>();
-        openingBrackets.put('[', ']');
-        openingBrackets.put('(', ')');
-        openingBrackets.put('{', '}');
-        openingBrackets.put('<', '>');
     }
 
     @Before
