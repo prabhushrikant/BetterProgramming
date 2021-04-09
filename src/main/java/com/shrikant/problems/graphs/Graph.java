@@ -2,6 +2,8 @@ package com.shrikant.problems.graphs;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 public class Graph {
 
@@ -73,6 +75,39 @@ public class Graph {
                 dfs(head, visited, result);
             }            
         }
+        
+        return result;
+    }
+
+    public ArrayList<Integer> bfs() {
+        
+        boolean[] visited = new boolean[v];
+        ArrayList<Integer> result = new ArrayList<Integer>();
+        for(int i=0; i < visited.length; i++) {
+            visited[i] = false;
+        }
+
+        Queue<Integer> q = new PriorityQueue<>();
+
+        for (int i = 0; i < v; ++i) 
+        {  
+            if (!visited[i]) {
+                visited[i] = true;
+                q.add(i);
+            } 
+ 
+            while(!q.isEmpty())   
+            {
+                var currV = q.remove();
+                result.add(currV);
+                for(int n : adj.get(currV)) {
+                    if (!visited[n]) {
+                        visited[n] = true;
+                        q.add(n);
+                    }                            
+                }                
+            }              
+        }         
         
         return result;
     }

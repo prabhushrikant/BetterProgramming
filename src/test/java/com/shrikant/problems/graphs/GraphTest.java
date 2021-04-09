@@ -14,12 +14,12 @@ import org.junit.runners.Parameterized;
 @RunWith(Parameterized.class)
 public class GraphTest {
 
-    private List<Pair> input;
+    private List<String> input;
     private String expectedResult;
 
     // constructor
     public GraphTest(List<String> input, String dfsTraversal) {
-        this.input = processInput(input);
+        this.input = input;
         this.expectedResult = dfsTraversal;
     }
 
@@ -36,6 +36,7 @@ public class GraphTest {
              "4 1",
              "1 3")), "[0, 1, 3, 2, 4, 5]"},     
       });
+        
    }
 
     @Test
@@ -43,14 +44,11 @@ public class GraphTest {
         assertThat(Graph.Build(input).dfs().toString(), is(expectedResult));
     }
 
-    private List<Pair> processInput(List<String> input) {
-        List<Pair> result = new ArrayList<Pair>();
-        for(int i=0; i < input.size(); i++) {
-            String arr[] = input.get(i).split(" ");
-            Pair p = new Pair(Integer.parseInt(arr[0]), Integer.parseInt(arr[1]));
-            result.add(p);
-        }
-
-        return result;
+    @Test
+    public void testBFS() {
+        var input = new ArrayList<String>(Arrays.asList("4 5", "0 1", "0 2", "0 3", "2 4"));
+        var expectedResult = "[0, 1, 2, 3, 4]";
+        var g = Graph.Build(input);
+        assertThat(g.bfs().toString(), is(expectedResult));
     }
 }
