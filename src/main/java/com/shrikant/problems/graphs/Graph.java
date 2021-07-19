@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
+import com.shrikant.problems.utils.Pair;
+
 public class Graph {
 
     public int v;
