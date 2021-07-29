@@ -7,6 +7,7 @@ public class ReverseAnInteger {
     
     public int reverseInteger(int x) {
 
+        
         int xRev = 0;
         while (x != 0) {
             int pop = x % 10;
