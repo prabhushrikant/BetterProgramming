@@ -5,7 +5,7 @@ import java.util.Queue;
 
 public class Tree {
     
-    static Node buildTree(String str)
+    public static Node buildTree(String str)
     {
         if(str.length() == 0 || str.charAt(0) == 'N') {
             return null;
