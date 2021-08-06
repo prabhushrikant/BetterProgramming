@@ -56,7 +56,7 @@ public class BreakLoopIfExists {
                 break;
             }
             slow = slow.next;
-            fast = fast.next == null ? fast.next : fast.next.next;
+            fast = fast.next == null ? null : fast.next.next;
         }
         return nodeInTheLoop;
     }
