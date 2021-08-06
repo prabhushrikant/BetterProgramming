@@ -3,7 +3,7 @@ package com.shrikant.problems.hashmap;
 import java.util.HashMap;
 import java.util.List;
 
-import com.shrikant.problems.utils.Pair;
+//import com.shrikant.problems.utils.Pair;
 
 // Asked in Best Buy phone interview.
 // A mall vendor has 10 pairs of shoes in his shop with the following sizes:
@@ -26,44 +26,63 @@ import com.shrikant.problems.utils.Pair;
 
 public class Sales {
 
-    public int getTotalSales(int[] inventory, List<Pair> orders)
-    {
+    public int getTotalSales(int[] inventory, List<Order> orders) {
         int result = 0;
 
         if (inventory == null) {
             return 0;
         }
-        
-        HashMap<Integer, Integer> inventoryMap = new HashMap<>();
-        
-        for(int i=0; i < inventory.length; i++) {
 
-            if (inventoryMap.containsKey(inventory[i]))
-            {
-                Integer newValue = inventoryMap.get(inventory[i]);
-                newValue++;
-                inventoryMap.put(inventory[i], newValue);
-            } else {
-                inventoryMap.put(inventory[i], 1);
-            }           
+        HashMap<Integer, Integer> inventoryMap = new HashMap<>();
+
+        for (int i = 0; i < inventory.length; i++) {
+
+            inventoryMap.merge(inventory[i], 1, (oldValue, newValue) -> newValue = ++oldValue);
+            // if (inventoryMap.containsKey(inventory[i]))
+            // {
+
+            // Integer newValue = inventoryMap.get(inventory[i]);
+            // newValue++;
+            // inventoryMap.put(inventory[i], newValue);
+            // } else {
+            // inventoryMap.put(inventory[i], 1);
+            // }
         }
 
-        //start procesing the orders
-        for(Pair order : orders) 
+        // start procesing the orders
+        for (Order order : orders) 
         {
-            if (inventoryMap.containsKey(order.first)) {
-            
-               int quantity = inventoryMap.get(order.first);               
-               result += order.second;
-               quantity--;
-               inventoryMap.put(order.first, quantity);
-               if (quantity <= 0) {
-                   inventoryMap.remove(order.first);
-               }
-            }  
+            Integer newValue = inventoryMap.computeIfPresent(order.shoeSize, (k, v) -> v = v - 1);
+            if (newValue == null) {
+                continue;
+            }
+            if (newValue <= 0) {
+                inventoryMap.remove(order.shoeSize);
+            }
+            result += order.price;
+
+            // if (inventoryMap.containsKey(order.first)) {
+            //     int quantity = inventoryMap.get(order.first);
+            //     result += order.second;
+            //     quantity--;
+            //     inventoryMap.put(order.first, quantity);
+            //     if (quantity <= 0) {
+            //         inventoryMap.remove(order.first);
+            //     }
+            // }
         }
 
         return result;
     }
-    
+}
+
+class Order {
+    public int shoeSize;
+    public int price;
+
+    public Order(int shoeSize, int price)
+    {
+        this.shoeSize = shoeSize;
+        this.price = price;
+    }
 }
