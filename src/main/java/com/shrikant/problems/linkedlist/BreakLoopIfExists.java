@@ -42,6 +42,7 @@ public class BreakLoopIfExists {
         //System.out.println("Loop Starting point : " + fast.data);
         //System.out.println("List real tail point : " + realTail.data);
         
+        //break the loop ...
         realTail.next = null;
         
     }
