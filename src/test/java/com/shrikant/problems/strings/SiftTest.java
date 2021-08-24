@@ -36,7 +36,8 @@ public class SiftTest {
       return Arrays.asList(new Object[][] {
         {"is", "sift", true},
         {"ad", "fraud", false},
-        {"sii", "ssift", false}
+        {"sii", "ssift", false},
+        {"sii", "siift", true}
       });
    }
 
