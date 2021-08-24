@@ -19,17 +19,47 @@ import java.util.Stack;
      - return stack2.peek();
 */
 
+//Second solution
+//you can have Stack of type StackNode where node has pointer to minimum value below it.
+
 //Follow up: how to have getMax() in O(1).
 public class AdvancedStack extends Stack<Integer> {
 
   private Stack<Integer> minStack = new Stack<>();
-  private Stack<Integer> maxStack = new Stack<>(); 
+  private Stack<Integer> maxStack = new Stack<>();
   private static final long serialVersionUID = 1L;
 
   @Override
   public Integer push(Integer n) {
-    
-    return n;
+    //fill up minstack
+    if (!minStack.isEmpty())
+    {
+      Integer minPeeked = minStack.peek();
+      if (n < minPeeked)
+      {
+        minStack.push(n);
+      }
+    } 
+    else {
+      minStack.push(n);
+    }
+
+    return super.push(n);
+  }
+
+  @Override
+  public Integer pop() {
+    //respectively also remove item from minstack
+    if (!minStack.isEmpty())
+    {
+      minStack.pop();
+    }
+
+    return super.pop();
+  }
+
+  public Integer getMin() {
+    return this.minStack.peek();
   }
     
 }
