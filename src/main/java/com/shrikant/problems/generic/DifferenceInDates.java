@@ -1,12 +1,7 @@
 package com.shrikant.problems.generic;
 
-
-import java.io.*;
 import java.util.*;
 import java.text.*;
-import java.math.*;
-import java.util.regex.*;
-
 public class DifferenceInDates {
 
     static long differenceInDays(String date1, String date2) throws ParseException {

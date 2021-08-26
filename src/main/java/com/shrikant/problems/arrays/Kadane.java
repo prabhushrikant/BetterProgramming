@@ -8,7 +8,7 @@ class Kadane{
     int maxSubarraySum(int arr[], int n){
         
     // Your code here
-    int result = -99999;
+    int result = Integer.MIN_VALUE;
     int max_till_here = 0;
     int left = 0;
     int right = 0;
@@ -30,5 +30,31 @@ class Kadane{
     return result;
         
     }
+    
+    //simpler implementation
+    //Note: Doesn't return the sub array positions
+    // int maxSubarraySum2(int nums[], int n)
+    // {
+    //     int i = 0;
+    //     int maxSum = Integer.MIN_VALUE;
+    //     int currSum = 0;
+    //     while(i < nums.length)
+    //     {
+    //         if (currSum + nums[i] < 0)
+    //         {
+    //             //reset
+    //             currSum = 0;
+    //         }            
+            
+    //         currSum = Math.max(nums[i], currSum + nums[i]);
+    //         if (currSum > maxSum)
+    //             maxSum = currSum;
+
+            
+    //         i++;
+    //     }
+        
+    //     return maxSum;
+    // }
     
 }

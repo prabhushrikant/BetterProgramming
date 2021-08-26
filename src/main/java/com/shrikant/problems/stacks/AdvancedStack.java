@@ -26,7 +26,7 @@ import java.util.Stack;
 public class AdvancedStack extends Stack<Integer> {
 
   private Stack<Integer> minStack = new Stack<>();
-  private Stack<Integer> maxStack = new Stack<>();
+  // private Stack<Integer> maxStack = new Stack<>();
   private static final long serialVersionUID = 1L;
 
   @Override

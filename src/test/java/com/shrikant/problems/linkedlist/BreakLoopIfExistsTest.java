@@ -6,7 +6,6 @@ import static org.hamcrest.core.Is.is;
 import java.util.Arrays;
 import java.util.List;
 
-import org.hamcrest.Matcher;
 import org.hamcrest.core.IsNull;
 import org.junit.Before;
 import org.junit.Test;
