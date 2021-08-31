@@ -1,0 +1,63 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch CompositeApp",
+            "request": "launch",
+            "mainClass": "com.shrikant.designpatterns.gof.composite.CompositeApp",
+            "projectName": "BetterProgramming"
+        },
+        {
+            "type": "java",
+            "name": "Launch DecoratorApp",
+            "request": "launch",
+            "mainClass": "com.shrikant.designpatterns.gof.decorator.DecoratorApp",
+            "projectName": "BetterProgramming"
+        },
+        {
+            "type": "java",
+            "name": "Launch AbstractFactoryApp",
+            "request": "launch",
+            "mainClass": "com.shrikant.designpatterns.gof.factory.abstract_factory.AbstractFactoryApp",
+            "projectName": "BetterProgramming"
+        },
+        {
+            "type": "java",
+            "name": "Launch FactoryMethodApp",
+            "request": "launch",
+            "mainClass": "com.shrikant.designpatterns.gof.factory.factory_method.FactoryMethodApp",
+            "projectName": "BetterProgramming"
+        },
+        {
+            "type": "java",
+            "name": "Launch FlyWeightApp",
+            "request": "launch",
+            "mainClass": "com.shrikant.designpatterns.gof.flyweight.FlyWeightApp",
+            "projectName": "BetterProgramming"
+        },
+        {
+            "type": "java",
+            "name": "Launch SingletonApp",
+            "request": "launch",
+            "mainClass": "com.shrikant.designpatterns.gof.singleton.SingletonApp",
+            "projectName": "BetterProgramming"
+        },
+        {
+            "type": "java",
+            "name": "Launch DifferenceInDates",
+            "request": "launch",
+            "mainClass": "com.shrikant.problems.generic.DifferenceInDates",
+            "projectName": "BetterProgramming"
+        }
+    ]
+}
