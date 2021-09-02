@@ -2,6 +2,7 @@ package com.shrikant.problems.trees;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 import java.util.stream.Collectors;
 
 //https://practice.geeksforgeeks.org/problems/level-order-traversal-in-spiral-form/1
@@ -55,7 +56,63 @@ public class SpiralLevelTraversal {
 
     //Note: Don't fall the fact that because it's a level order traversal and you should use queues, problem is much simpler using stacks 
     //flipping of right to left is inevitable.
+    public ArrayList<Integer> findSpiral2(Node root)
+    {
+        Stack<Node> oddStack = new Stack<>();
+        Stack<Node> evenStack = new Stack<>();
+        int height = new HeightOfTree().getHeight2(root);
+        int currHeight = 1;
+        List<Node> result = new ArrayList<>();
 
+        if (root != null)
+        {
+            oddStack.push(root);
+        }
+
+        while(currHeight <= height)
+        {
+            if (currHeight%2 == 1)
+            {
+                //pop odd stack, push even stack.
+                while(!oddStack.isEmpty())
+                {
+                    Node popped = oddStack.pop();
+                    result.add(popped);
+                    if (popped.right != null) 
+                    {
+                        evenStack.push(popped.right);
+                    }
+                    if (popped.left != null) 
+                    {
+                        evenStack.push(popped.left);
+                    }
+                }
+            } 
+            else
+            {   
+                //pop even stack, push to odd stack
+                while(!evenStack.isEmpty())
+                {
+                    Node popped = evenStack.pop();
+                    result.add(popped);
+                    if (popped.left != null) 
+                    {
+                        oddStack.push(popped.left);
+                    }
+                    if (popped.right != null) 
+                    {
+                        oddStack.push(popped.right);
+                    }
+
+                }
+            } 
+
+            currHeight++;
+        }
+        
+        return (ArrayList<Integer>) result.stream().map(x -> x.data).collect(Collectors.toList());
+
+    }
 
 
 }

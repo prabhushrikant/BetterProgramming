@@ -43,4 +43,10 @@ public class SpiralLevelTraversalTest {
        Node root = Tree.buildTree(input);
        assertThat(testObj.findSpiral(root).toString(), is(expectedOutput));
    }
+
+   @Test
+   public void testSpiralLevelTraversalMethod2() {
+       Node root = Tree.buildTree(input);
+       assertThat(testObj.findSpiral2(root).toString(), is(expectedOutput));
+   }
 }

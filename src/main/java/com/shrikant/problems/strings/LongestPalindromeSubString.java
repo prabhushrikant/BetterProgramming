@@ -40,7 +40,7 @@ public class LongestPalindromeSubString {
         longestPalindromeSubString(str);
         
         int start = this.startIndex.getValue();
-        int end = start + this.maxLength.getValue();
+        int end = start + this.maxLength.getValue(); //because the length is including the start.
         return str.substring(start, end);
     }
 
