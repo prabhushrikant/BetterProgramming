@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Vmware",
+            "request": "launch",
+            "mainClass": "com.shrikant.problems.stacks.Vmware",
+            "projectName": "BetterProgramming"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
