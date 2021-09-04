@@ -1,8 +1,12 @@
 package com.shrikant.problems.trees;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.util.Stack;
+import java.util.stream.Collectors;
 
 //Connect nodes at the same level when traveresed the tree in BFS order.
 //From left to right.
@@ -12,6 +16,7 @@ import java.util.Stack;
 class SplNode extends Node {
 
     SplNode nextRight; 
+
     SplNode(int item) {
         super(item);
     }
@@ -62,6 +67,26 @@ public class ConnectBFSNodes {
         return result;
     }
 
+    //follow up - use constant extra space but recursive approach is ok.
+    // public List<Integer> connectNodesOnSameLevel2(SplNode root) {
+
+    //     //idea is to travel in BFS style but keep track of previously seen node.
+    //     //reset it at starting of each level. 
+    //     //starting tree height at 0
+    //     int d = 0;
+    //     //Stack<SplNode> connectedNodesStack = new Stack<SplNode>();
+    //     HeightOfTree obj = new HeightOfTree();
+    //     int heighOfTheTree = obj.getHeight(root);
+    //     SplNode prevNodeOnSameLevel = null; 
+    //     while(d <= heighOfTheTree) {
+    //         connectNodesOnGivenLevel2(root, d, prevNodeOnSameLevel);
+    //         d++;            
+    //         prevNodeOnSameLevel = null;
+    //     }
+
+    //     //return makeResult(root, heighOfTheTree);
+    // }
+
     private void connectNodesOnGivenLevel(Node node, int level, Stack<SplNode> result)
     {      
         if (level == 0) {
@@ -79,7 +104,28 @@ public class ConnectBFSNodes {
         
         if (node.right != null) {
             connectNodesOnGivenLevel(node.right, level-1, result);
-        }  
+        }
     }
+
+    // private void connectNodesOnGivenLevel2(SplNode node, int level, SplNode prevNode)
+    // {      
+    //     if (level == 0) {
+            
+    //         SplNode splNode = new SplNode(node);
+    //         if (prevNode == null)
+    //         {
+    //             prevNode = splNode;
+    //         }
+    //     }
+
+    //     if (node.left != null)
+    //     {
+    //         connectNodesOnGivenLevel2(node.left, level-1, prevNode);
+    //     }
+        
+    //     if (node.right != null) {
+    //         connectNodesOnGivenLevel2(node.right, level-1, prevNode);
+    //     }  
+    // }
 
 }

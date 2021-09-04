@@ -46,4 +46,11 @@ public class ConnectBFSNodesTest {
        Node root = Tree.buildTree(input);
        assertThat(testObj.connectNodesOnSameLevel(root).toString(), is(expectedOutput));
    }
+
+//    @Test
+//    public void testConnectBFSNodesMethod2() {
+//        Node root = Tree.buildTree(input);
+//        SplNode splRoot = new SplNode(root);
+//        assertThat(testObj.connectNodesOnSameLevel2(splRoot).toString(), is(expectedOutput));
+//    }
 }
