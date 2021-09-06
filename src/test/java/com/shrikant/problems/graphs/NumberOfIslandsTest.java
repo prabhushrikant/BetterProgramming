@@ -44,5 +44,5 @@ public class NumberOfIslandsTest {
     @Test
     public void testNumberOfIslands() {
         assertThat(testObj.numIslands(input), is(expectedResult));
-    }
+    }    
 }

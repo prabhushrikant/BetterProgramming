@@ -1,5 +1,6 @@
 package com.shrikant.problems.graphs;
 
+//Can be solved using bfs : https://www.geeksforgeeks.org/islands-in-a-graph-using-bfs/
 public class NumberOfIslands {
     public int numIslands(char[][] grid) {
         int m = grid.length;
