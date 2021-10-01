@@ -13,12 +13,13 @@ public class InorderIterative {
         if (root == null)
             return result;
 
-        Node curr = root;    
+        stack.push(root);
+        Node curr = root;  
         while(!stack.isEmpty())
         {
             while(curr.left != null)
             {
-                stack.add(curr.left);
+                stack.push(curr.left);
                 curr = curr.left;
             }
             Node popped = stack.pop();

@@ -17,7 +17,8 @@ public class BreakLoopIfExists {
             size++;
         }
         
-        //find the starting point of loop, hence one before it is the tail of the list.
+        //find the starting node of loop, 
+        //A node before it, is the real tail node of the linked list after breaking it.
         ListNode slow = head;
         ListNode fast = head;
         ListNode realTail = head;
