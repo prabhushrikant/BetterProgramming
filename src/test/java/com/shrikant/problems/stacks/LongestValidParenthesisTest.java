@@ -41,6 +41,7 @@ public class LongestValidParenthesisTest {
         { "(())(()", 4},
         { ")()())", 4},
         { "()()()", 6},
+        { "(())((((())))", 8},
       });
    }
 
