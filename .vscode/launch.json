@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch YelpService",
+            "request": "launch",
+            "mainClass": "com.shrikant.problems.RestApi.YelpService",
+            "projectName": "BetterProgramming"
+        },
+        {
+            "type": "java",
+            "name": "Launch RestApiApplication",
+            "request": "launch",
+            "mainClass": "com.shrikant.problems.RestApi.RestApiApplication",
+            "projectName": "BetterProgramming"
+        },
+        {
+            "type": "java",
+            "name": "Launch FootBallMatchesApi",
+            "request": "launch",
+            "mainClass": "com.shrikant.problems.RestApi.FootBallMatchesApi",
+            "projectName": "BetterProgramming"
+        },
+        {
+            "type": "java",
             "name": "Launch Vmware",
             "request": "launch",
             "mainClass": "com.shrikant.problems.stacks.Vmware",
