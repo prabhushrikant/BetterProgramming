@@ -3,7 +3,7 @@
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": [
+    "configurations": [       
         {
             "type": "java",
             "name": "Launch YelpService",
@@ -42,42 +42,42 @@
             "type": "java",
             "name": "Launch CompositeApp",
             "request": "launch",
-            "mainClass": "com.shrikant.designpatterns.gof.composite.CompositeApp",
+            "mainClass": "com.shrikant.designpatterns.gof.structural.composite.CompositeApp",
             "projectName": "BetterProgramming"
         },
         {
             "type": "java",
             "name": "Launch DecoratorApp",
             "request": "launch",
-            "mainClass": "com.shrikant.designpatterns.gof.decorator.DecoratorApp",
+            "mainClass": "com.shrikant.designpatterns.gof.structural.decorator.DecoratorApp",
             "projectName": "BetterProgramming"
         },
         {
             "type": "java",
             "name": "Launch AbstractFactoryApp",
             "request": "launch",
-            "mainClass": "com.shrikant.designpatterns.gof.factory.abstract_factory.AbstractFactoryApp",
+            "mainClass": "com.shrikant.designpatterns.gof.creational.factory.abstract_factory.AbstractFactoryApp",
             "projectName": "BetterProgramming"
         },
         {
             "type": "java",
             "name": "Launch FactoryMethodApp",
             "request": "launch",
-            "mainClass": "com.shrikant.designpatterns.gof.factory.factory_method.FactoryMethodApp",
+            "mainClass": "com.shrikant.designpatterns.gof.creational.factory.factory_method.FactoryMethodApp",
             "projectName": "BetterProgramming"
         },
         {
             "type": "java",
             "name": "Launch FlyWeightApp",
             "request": "launch",
-            "mainClass": "com.shrikant.designpatterns.gof.flyweight.FlyWeightApp",
+            "mainClass": "com.shrikant.designpatterns.gof.structural.flyweight.FlyWeightApp",
             "projectName": "BetterProgramming"
         },
         {
             "type": "java",
             "name": "Launch SingletonApp",
             "request": "launch",
-            "mainClass": "com.shrikant.designpatterns.gof.singleton.SingletonApp",
+            "mainClass": "com.shrikant.designpatterns.gof.creational.singleton.SingletonApp",
             "projectName": "BetterProgramming"
         },
         {

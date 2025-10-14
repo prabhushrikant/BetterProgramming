@@ -5,6 +5,8 @@ import static org.hamcrest.core.Is.is;
 
 import org.junit.Test;
 
+import com.shrikant.designpatterns.gof.creational.singleton.SingletonExample;
+
 public class SingletonExampleTest {
 
   @Test

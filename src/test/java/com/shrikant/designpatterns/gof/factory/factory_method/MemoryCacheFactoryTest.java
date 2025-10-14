@@ -2,6 +2,12 @@ package com.shrikant.designpatterns.gof.factory.factory_method;
 
 import org.junit.Test;
 
+import com.shrikant.designpatterns.gof.creational.factory.abstract_factory.CustomMemCache;
+import com.shrikant.designpatterns.gof.creational.factory.abstract_factory.GoogleCache;
+import com.shrikant.designpatterns.gof.creational.factory.factory_method.CustomMemCacheFactory;
+import com.shrikant.designpatterns.gof.creational.factory.factory_method.GoogleCacheFactory;
+import com.shrikant.designpatterns.gof.creational.factory.factory_method.MemoryCache;
+
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
