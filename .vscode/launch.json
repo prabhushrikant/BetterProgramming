@@ -3,7 +3,14 @@
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": [       
+    "configurations": [
+        {
+            "type": "java",
+            "name": "BuilderApp",
+            "request": "launch",
+            "mainClass": "com.shrikant.designpatterns.gof.creational.builder.BuilderApp",
+            "projectName": "BetterProgramming"
+        },
         {
             "type": "java",
             "name": "Launch YelpService",
