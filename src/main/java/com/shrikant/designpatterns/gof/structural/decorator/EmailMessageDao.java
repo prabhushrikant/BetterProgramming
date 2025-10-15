@@ -6,8 +6,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class EmailMessageDao extends AbstractDecorator {
-
   final Logger LOGGER = LoggerFactory.getLogger(EmailMessageDao.class);
+  
+  public EmailMessageDao(IMessageDao messageDao) {
+    super(messageDao);
+  }
 
   //@Override
   public Message get(UUID id) {
@@ -58,5 +61,11 @@ public class EmailMessageDao extends AbstractDecorator {
     //todo:
     //custom logic to add email headers to the message and generate an emailable message which can be then sent using emailClient.
     LOGGER.info("Message is successfully emailed to {}", toList);
+  }
+
+  @Override
+  public void decorate() {
+    // Implement your decoration logic here
+    LOGGER.info("Decorate method called in EmailMessageDao.");
   }
 }

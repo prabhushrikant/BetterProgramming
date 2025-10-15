@@ -18,20 +18,21 @@ public class DecoratorApp {
     MessageDaoImpl messageDao = new MessageDaoImpl();
     Message rawMessage = messageDao.create("this is title of message# 1", "this is body of message# 1.", "signature for message# 1");
 
-    //email message
-    EmailMessageDao emailMessageDao = new EmailMessageDao();
-    //composition instead of inheritance.
-    emailMessageDao.setComponent(messageDao);
-    emailMessageDao.emailMessage(rawMessage, "reciever1@gmail.com; reciever2@gmail.com", "cced@gmail.com", "bcced@gmail.com");
-
     //format message
-    FormatMessageDao formatMessageDao = new FormatMessageDao();
-    formatMessageDao.setComponent(messageDao);
+    FormatMessageDao formatMessageDao = new FormatMessageDao(messageDao);
     Message formattedMsg = formatMessageDao.formatMessage(rawMessage, "format_for_gmail.css");
 
     //let's say now you have to have formatted message to be emailed.
     //regular inheritance model would have forced you into diamond problem.
     //But with decorator it becomes easy.
+    EmailMessageDao emailMessageDao = new EmailMessageDao(formatMessageDao);
     emailMessageDao.emailMessage(formattedMsg, "reciever1@gmail.com; reciever2@gmail.com", "cced@gmail.com", "bcced@gmail.com");
+
+    ///print message
+    //let's say now you have to print the message.
+    //email message from raw dao.
+    PrintDecorator printDecorator = new PrintDecorator(messageDao);
+    printDecorator.printMessage(rawMessage);
+    printDecorator.printMessage(formattedMsg);
   }
 }

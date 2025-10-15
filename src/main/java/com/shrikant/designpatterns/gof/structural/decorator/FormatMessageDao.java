@@ -6,9 +6,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class FormatMessageDao extends AbstractDecorator {
-
   final Logger LOGGER = LoggerFactory.getLogger(EmailMessageDao.class);
-
+  
+  public FormatMessageDao(IMessageDao messageDao) {
+    super(messageDao);
+  }
+  
   public Message get(UUID id) {
     if (super.messageDao != null) {
       return super.messageDao.get(id);
@@ -16,7 +19,6 @@ public class FormatMessageDao extends AbstractDecorator {
 
     throw new DecoratorException("Component is set to null.");
   }
-
 
   public Message create(@Nonnull String title, String body, String signature) {
     if (super.messageDao != null) {
@@ -26,14 +28,12 @@ public class FormatMessageDao extends AbstractDecorator {
     throw new DecoratorException("Component is set to null.");
   }
 
-
   public void delete(UUID id) {
     if (super.messageDao != null) {
       super.messageDao.delete(id);
     }
     throw new DecoratorException("Component is set to null.");
   }
-
 
   public Message update(Message msgToUpdateWithId) {
     if (super.messageDao != null) {
@@ -53,11 +53,17 @@ public class FormatMessageDao extends AbstractDecorator {
 
     //todo:
     //deep copy message.
-    Message copyOfMessage = new Message(srcMessage.id, srcMessage.title, srcMessage.body, srcMessage.signature);
+    Message copyOfMessage = new Message(UUID.randomUUID(), srcMessage.title, srcMessage.body, srcMessage.signature);
 
     //custom logic to apply the css script to the message and have it annotated with correct formatting tags e.g. <bold></bold> etc.
     LOGGER.info("Message is successfully formatted as per given css");
 
     return copyOfMessage;
+  }
+
+    @Override
+  public void decorate() {
+    // Implement your decoration logic here
+    LOGGER.info("Decorate method called in FormatMessageDao.");
   }
 }

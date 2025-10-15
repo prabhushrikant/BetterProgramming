@@ -1,4 +1,4 @@
-package com.shrikant.designpatterns.gof.bridge;
+package com.shrikant.designpatterns.gof.structural.bridge;
 
 /**
  * Bridge pattern is used when we want a service and its client evolve 
