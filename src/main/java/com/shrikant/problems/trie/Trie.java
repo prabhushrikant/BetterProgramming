@@ -2,6 +2,18 @@ package com.shrikant.problems.trie;
 
 import java.util.HashMap;
 
+// can also use this TrieNode class instead of HashMap implementation
+/*     class TrieNode {
+        Map<Character, TrieNode> children;
+        boolean endOfWord;
+        int count;
+
+        public TrieNode()
+        {
+            children = new HashMap<>();
+            endOfWord = false;
+        }
+    } */
 public class Trie {
 
     // implementing a HashMap
@@ -47,6 +59,7 @@ public class Trie {
         }
   
         // putting 0 to end the string
+        // can't I put null value instead of empty hashmap as value for \0?
         node.put('\0', new HashMap<Character, HashMap>(0));
     }
 
@@ -77,6 +90,7 @@ public class Trie {
             return true;
         }
         else {
+            // given string is a prefix (substring) but not a whole string in trie
             return false;
         }
     }
