@@ -28,9 +28,9 @@ public class GraphTest {
       return Arrays.asList(new Object[][] {
         //  { new ArrayList<String>(Arrays.asList("3 4", "3 0", "1 0", "2 0")), "[0, 1, 2, 3]"}, 
          { new ArrayList<String>(Arrays.asList(
-             "6 6", 
+             "6 6",
              "5 0", 
-             "5 2", 
+             "5 2",
              "2 3",
              "4 0",
              "4 1",
