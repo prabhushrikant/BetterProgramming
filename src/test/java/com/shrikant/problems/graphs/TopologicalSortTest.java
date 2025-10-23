@@ -29,7 +29,7 @@ public class TopologicalSortTest {
     @Parameterized.Parameters
     public static List<Object[]> data() {
       return Arrays.asList(new Object[][] {
-         { new ArrayList<String>(Arrays.asList("3 4", "3 0", "1 0", "2 0")), "[3, 2, 1, 0]"}, 
+         { new ArrayList<String>(Arrays.asList("4 4", "3 0", "1 0", "2 0", "2 3")), "[2, 3, 1, 0]"}, 
          { new ArrayList<String>(Arrays.asList(
              "6 6", 
              "5 0", 

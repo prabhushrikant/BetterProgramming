@@ -53,6 +53,8 @@ public class TopologicalSort {
         
         // Push current vertex to stack
         // which stores result
+        // i.e. Node with most outgoing edges will be on top of the stack (pre-requisite to other nodes)
+        // and node with least outgoing edges will be at the bottom (node which can be processed last because it has no dependents)
         stack.push(v);
     }
 }
