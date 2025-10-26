@@ -28,6 +28,7 @@ public class Graph {
     // input example: ["4 5", "0 1", "0 2", "0 3", "2 4"]
     // first pair contains the number of edges and number of nodes
     // nodes are numbered from 0 to n-1
+    // stores a directed graph but unweighted
     static Graph Build(List<String> input) {
         List<Pair> processedInput = processInput(input);
         Graph g = null;

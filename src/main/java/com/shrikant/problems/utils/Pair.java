@@ -20,4 +20,9 @@ public class Pair {
     public boolean equals(Object obj) {
         return ((Pair)obj).first == this.first && ((Pair)obj).second == this.second;
     }
+
+    @Override
+    public String toString() {
+        return "(" + this.first + "," + this.second + ")";
+    }
 }
