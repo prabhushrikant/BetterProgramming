@@ -1,6 +1,7 @@
 package com.shrikant.problems.graphs;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
@@ -76,6 +77,42 @@ public class WeightedGraph {
                     //update the distance and add pair to the queue.
                     result.get(v).second = distanceOfU + weight;
                     q.add(new Pair(v, distanceOfU + weight));
+                }
+            }
+        }
+        return result;
+    }
+
+    public ArrayList<Pair> getMinSpanningTree() {
+        // Prim's algorithm
+        ArrayList<Pair> result = new ArrayList<Pair>();
+        boolean[] visited = new boolean[this.v]; 
+        for (int i = 0; i < this.v; i++) {
+            result.add(new Pair(i, 0));
+            visited[i] = false;
+        }
+        result.get(0).second = 0;
+
+        Pair start = new Pair(0, 0);
+        //priority queue is a min-heap of pair(node, distance from source), so that we pick up the 
+        //node with shortest distance to process next.  
+        PriorityQueue<Pair> q = new PriorityQueue<>(Comparator.comparingInt(p -> p.second));
+        q.add(start);
+        int total = 0;
+        //process popped node only if it is not already visited.   
+        while(!q.isEmpty()) {
+            Pair popped = q.poll();
+            int u = popped.first;
+            int weight = popped.second;
+            if (visited[u]) {
+                continue;
+            }
+            visited[u] = true;
+            total += weight;
+            result.get(u).second = total;
+            for(Pair neighbor : this.adj.get(u)) {
+                if (!visited[neighbor.first]) {
+                    q.add(neighbor);
                 }
             }
         }
