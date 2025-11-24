@@ -63,6 +63,10 @@ public class Trie {
         node.put('\0', new HashMap<Character, HashMap>(0));
     }
 
+    public HashMap<Character, HashMap> getOrigin() {
+        return origin;
+    }   
+
     public boolean search(String str)
     {
         HashMap<Character, HashMap> presentNode = origin;

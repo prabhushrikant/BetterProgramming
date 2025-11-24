@@ -3,6 +3,7 @@ package com.shrikant.problems.graphs;
 import java.util.ArrayList;
 import java.util.Stack;
 
+//limited to directed acyclic graphs (DAG)
 public class TopologicalSort {
     
     private Graph g;
@@ -28,14 +29,24 @@ public class TopologicalSort {
         // Topological Sort starting
         // from all vertices one by one
         for (int i = 0; i < V; i++)
-            if (visited[i] == false)
+            if (!visited[i])
                 topologicalSortUtil(i, visited, stack);
  
         // Print contents of stack
-        while (stack.empty() == false)
+        while (!stack.empty())
             result.add(stack.pop());
             // System.out.print(stack.pop() + " ");
         return result;
+    }
+
+    // returns true if graph is acyclic else false if it has a cycle
+    public boolean isDAG() {
+        try {
+            topologicalSort();
+            return true;
+        } catch (StackOverflowError e) {
+            return false;
+        }
     }
 
     // A recursive function used by topologicalSort
@@ -51,10 +62,12 @@ public class TopologicalSort {
                 topologicalSortUtil(i, visited, stack);
         }
         
-        // Push current vertex to stack
-        // which stores result
-        // i.e. Node with most outgoing edges will be on top of the stack (pre-requisite to other nodes)
-        // and node with least outgoing edges will be at the bottom (node which can be processed last because it has no dependents)
+        // Push current vertex to stack which stores result (topological order).
+        // i.e. Node with least outgoing edges will be on top of the stack (pre-requisite to other nodes)
+        // and node with most outgoing edges will be at the bottom (node which can be processed last because 
+        // it has no dependents)
         stack.push(v);
     }
+
+
 }
