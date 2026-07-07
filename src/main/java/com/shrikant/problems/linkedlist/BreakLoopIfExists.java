@@ -1,6 +1,10 @@
 package com.shrikant.problems.linkedlist;
 
-//detect and break the loop in linked list (if exists)
+//detect and break the loop in linked list (if exists), 
+//using Floyd's cycle detection algorithm (Tortoise and Hare algorithm)
+//This is optimal solution with O(n) time complexity and O(1) space complexity.
+//But we can also use HashSet to store the nodes and check if we have already seen the node before, if yes then break the loop. 
+//(Easier to implement but not optimal in space complexity, O(n) space complexity and O(n) time complexity.)
 public class BreakLoopIfExists {
 
     public void breakLoop(ListNode head) {
@@ -40,10 +44,10 @@ public class BreakLoopIfExists {
         }
 
         //debugging.
-        //System.out.println("Loop Starting point : " + fast.data);
+        //System.out.println("Cycle Starting point : " + fast.data);
         //System.out.println("List real tail point : " + realTail.data);
         
-        //break the loop ...
+        //break the Cycle ...
         realTail.next = null;
         
     }

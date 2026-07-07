@@ -2,6 +2,8 @@ package com.shrikant.problems.trie;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,8 +32,8 @@ public class TrieTest {
     @Parameterized.Parameters
     public static List<Object[]> data() {
       return Arrays.asList(new Object[][] {
-        { new ArrayList<String>(Arrays.asList("Shrikant", "Sheetal", "Mandar", "Manu")), "Manu", true},
-        { new ArrayList<String>(Arrays.asList("Shrikant", "Sheetal", "Mandar", "Manu")), "Mandy", false},
+        { new ArrayList<String>(Arrays.asList("Shrikant", "ShrikantPrabhu", "Sheetal", "Mandar", "Manu")), "Manu", true},
+        { new ArrayList<String>(Arrays.asList("Shrikant", "ShrikantPrabhu", "Sheetal", "Mandar", "Manu")), "Mandy", false},
       });
    }
 
@@ -46,6 +48,19 @@ public class TrieTest {
            testObj.attach(str);
        }
        assertThat(testObj.search(searchString), is(expectedResult));
+   }
+
+   @Test
+   public void testDeleteFromTrie() {
+       for(String str : inputs) {
+           testObj.attach(str);
+       }
+       assertTrue(testObj.delete("Shrikant"));
+       assertFalse(testObj.delete("Tom"));
+       assertFalse(testObj.delete(""));
+       assertTrue(testObj.delete("ShrikantPrabhu"));
+       assertTrue(testObj.delete("Manu"));
+       assertTrue(testObj.search("Mandar")); //testing that prefix "Man" isnot deleted.
    }
 
 }

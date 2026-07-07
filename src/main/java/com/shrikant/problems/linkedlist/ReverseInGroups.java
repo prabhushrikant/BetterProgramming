@@ -16,7 +16,9 @@ public class ReverseInGroups {
         }    
 
         //this order is important, reversing the order makes it go in infite loop.
+        //reverse the next group first, so that we can connect it to this group after reversing this group.
         nextt = reverse(nextt.next, k);
+        //reverse this group and get the new head of this group.
         ListNode newHead = reverseSubList(node, k);
 
         //connect next reversed groups to this one.

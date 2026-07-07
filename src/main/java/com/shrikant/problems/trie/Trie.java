@@ -98,5 +98,38 @@ public class Trie {
             return false;
         }
     }
+
+    public boolean delete(String word) {
+        return deleteHelper(origin, word, 0);
+    }
+
+    private boolean deleteHelper(HashMap<Character, HashMap> currentNode, String word, int index) {
+        if (index == word.length()) {
+            // If we have reached the end of the word, check if it exists in the trie
+            if (!currentNode.containsKey('\0')) {
+                return false; // Word does not exist
+            }
+            currentNode.remove('\0'); // Remove the end-of-word marker
+            return true; // Word existed and was deleted
+        }
+
+        char ch = word.charAt(index);
+        HashMap<Character, HashMap> nextNode = currentNode.get(ch);
+        if (nextNode == null) {
+            return false; // Word does not exist
+        }
+
+        boolean deleted = deleteHelper(nextNode, word, index + 1);
+        if (!deleted) {
+            return false; // Underlying word was not found or deleted
+        }
+
+        // If the child node became empty after deletion, remove the branch.
+        if (nextNode.isEmpty()) {
+            currentNode.remove(ch);
+        }
+
+        return true;
+    }
     
 }
